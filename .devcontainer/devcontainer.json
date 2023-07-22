@@ -21,10 +21,11 @@
 		"vscode": {
 			"extensions": [
 				"MS-CEINTL.vscode-language-pack-ja",
-				"ms-python.python"
+				"ms-python.python",
+				"ms-azuretools.vscode-docker"
 			]
 		}
-	}
+	},
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
@@ -40,6 +41,7 @@
 
 	// Uncomment the next line to run commands after the container is created.
 	// "postCreateCommand": "cat /etc/os-release",
+	"postCreateCommand": "sphinx-autobuild book build"
 
 	// Configure tool-specific properties.
 	// "customizations": {},
