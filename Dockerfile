@@ -25,6 +25,7 @@ RUN type -p curl >/dev/null || (apt update && apt install curl -y); \
 # create user
 RUN groupadd -g ${USER_GID} ${USER} && \
     useradd -m -s /bin/bash -u ${USER_UID} -g ${USER_GID} ${USER}
-
 USER ${USER}
-
+ENV PATH=/home/${USER}/.local/bin:/home/${USER}/bin:$PATH
+COPY book/requirements.txt /tmp/
+RUN pip install -r /tmp/requirements.txt
