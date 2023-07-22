@@ -5,6 +5,9 @@ title: My sample book
 author: The Jupyter Book Community
 logo: logo.png
 
+sphinx:
+  config:
+    language: ja
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
 execute:
